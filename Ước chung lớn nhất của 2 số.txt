@@ -1,0 +1,16 @@
+a = int (input ('Nhập số nguyên dương a:'))
+while (a<0):
+    print ('a phải lớn hơn 0')
+    print ('Vui lòng nhập lại số a:')
+    a = int (input ())
+b = int (input ('Nhập số nguyên dương b:'))
+while (b<0 or b<a):
+    print ('b phải lớn hơn 0 và lớn hơn số nguyên dương a')
+    print ('Vui lòng nhập lại số b:')
+    b=int (input())
+max = 0
+print ('Ước chung lớn nhất của 2 số a và b:')
+for i in range (1, (a+1)):
+  if (a%i==0 and b%i==0):
+    max = i
+print (max)

@@ -1,0 +1,79 @@
+print("tìm tổng nghiệm của n phương trình bậc 2 nếu phương trình nhập vào có 1 nghiệm")
+tong = 0
+x = 0
+print("Nhập vào số n: ")
+n = int(input())
+for i in range(1, n + 1):
+  print("Giải phương trình bậc 2: ax^2 + b + c = 0 lan ", i)
+  a = float(input())
+  b = float(input())
+  c = float(input())
+  nghiem = 0
+  if a == 0:
+      if b == 0:
+          if c == 0:
+              nghiem = 3
+              print(nghiem)
+          else:
+              nghiem = 3
+              print(nghiem)
+      else:
+          if c == 0:
+              nghiem = 1
+              print(nghiem)
+              tong = tong + 0
+          else:
+              x = -b / c
+              nghiem = 1
+              print(nghiem)
+              tong = tong + 0
+  else:
+      if b == 0:
+          if c == 0:
+              nghiem = 1
+              print(nghiem)
+              tong = tong + 0
+          else:
+              delta = b * b - 4 * a * c
+              if delta == 0:
+                  nghiem = 1
+                  x= -b/(2*a)
+                  print(nghiem)
+                  tong = tong + x
+              else:
+                  if delta > 0:
+                      nghiem = 2
+                      print(nghiem)
+                  else:
+                      nghiem = 0
+                      print(nghiem)
+      else:
+          if c == 0:
+              delta = b * b - 4 * a * c
+              if delta == 0:
+                  nghiem = 1
+                  print(nghiem)
+                  x= -b/(2*a)
+                  tong = tong + x
+              else:
+                  if delta > 0:
+                      nghiem = 2
+                      print(nghiem)
+                  else:
+                      nghiem = 0
+                      print(nghiem)
+          else:
+              delta = b * b - 4 * a * c
+              if delta == 0:
+                  nghiem = 1
+                  print(nghiem)
+                  x= -b/(2*a)
+                  tong = tong + x
+              else:
+                  if delta > 0:
+                      nghiem = 2
+                      print(nghiem)
+                  else:
+                      nghiem = 0
+                      print(nghiem)
+print(tong)

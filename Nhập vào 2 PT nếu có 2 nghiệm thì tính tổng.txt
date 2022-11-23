@@ -1,0 +1,45 @@
+import math
+print("nhap he so phuong trinh 1")
+a=float(input("nhap he so a"))
+b=float(input("nhap he so b"))
+c=float(input("nhap he so b"))
+delta1=0
+if a==0:
+   if b!=0:
+       kq=1 #pt có 1 nghiệm
+   else:
+       kq=2 #pt vô nghiệm
+else:
+ delta1=b*b-4*a*c
+ if delta1<0:
+     kq=3 #pt vô nghiệm
+ else:
+     if delta1==0:
+         kq=4 #pt có nghiệm kép nên là một nghiệm
+     else:
+         kq=5
+print("nhap he so phuong trinh 2")
+d=float(input("nhap he so d"))
+e=float(input("nhap he so e"))
+f=float(input("nhap he so f"))
+delta2=0
+if d==0:
+   if e!=0:
+       kq=6 #pt có 1 nghiệm
+   else:
+       kq=7 #pt vô nghiệm
+else:
+ delta2=e*e-4*d*f
+ if delta2<0:
+     kq=8 #pt vô nghiệm
+ else:
+     if delta2==0:
+         kq=9 #pt có nghiệm kép nên là một nghiệm
+     else:
+         kq=10
+if kq==5 and kq==10:
+   S1=-b/a
+   S2=-e/d
+   print('phuong trinh co 2 nghiem va tong nghiem lan luot la: S1=',S1,'S2=',S2)
+else:
+   print('hai phuong trinh deu khong dong thoi co hai nghiem')
